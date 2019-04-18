@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplo sencillo de AJAX</title>
+
+	<script type="text/javascript" src="../jQuery/jquery.min.js"></script>
+
+	<script>
+	$(document).ready(function(){
+
+		$("button").click(function(){
+
+			$.post("procesar2.php", 
+				{ "nombre": "Pablo", "ciudad": "Madrid" },
+				function(data,status) {
+					alert("Data: " + data + "\nStatus: " + status);
+					$("#div1").html(data);
+				}
+			);
+		});
+	});
+
+
+	</script>
+
+</head>
+<body>
+
+	<div id="div1"><h2>Texto original</h2></div>
+	<button>Cambiar texto</button>
+ 
+</body>
+</html>

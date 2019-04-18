@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplo sencillo de AJAX</title>
+
+	<script type="text/javascript" src="../jQuery/jquery.min.js"></script>
+
+	<script>
+	$(document).ready(function(){
+		$("button").click(function(){
+			$("#div1").load("texto.txt");
+		});
+	});
+
+	/*$(document).ready(function(){
+		$('#btn').click(function(){
+			alert("Texto: " + $('#div1').text());
+		});
+		$('#btn2').click(function(){
+			alert("HTML: " + $('#div1').html());
+		});
+	});*/
+
+
+	</script>
+
+</head>
+<body>
+
+	<div id="div1"><h2>Texto original</h2></div>
+	<button id='btn'>Ver texto</button>
+	<!--<button id='btn2'>Ver HTML</button>-->
+ 
+</body>
+</html>
